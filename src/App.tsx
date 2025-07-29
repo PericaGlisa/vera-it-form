@@ -60,20 +60,20 @@ function App() {
     <div className="min-h-screen vera-gradient-light">
       {/* Header */}
       <div className="vera-gradient-dark vera-shadow border-b border-vera-accent/20">
-        <div className="max-w-4xl mx-auto px-6 py-8">
-          <div className="flex items-center space-x-4 mb-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+          <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
             <img 
               src="/vera it - logo_transparent.png" 
               alt="VERA IT Logo" 
-              className="h-16 w-auto"
+              className="h-12 sm:h-16 w-auto"
             />
             <div>
               <p className="text-vera-accent font-medium">Neue Kunden Formular</p>
             </div>
           </div>
           
-          <div className="bg-vera-primary/30 border-l-4 border-vera-accent p-6 rounded-r-lg backdrop-blur-sm">
-            <div className="flex items-start space-x-3">
+          <div className="bg-vera-primary/30 border-l-4 border-vera-accent p-4 sm:p-6 rounded-r-lg backdrop-blur-sm">
+            <div className="flex items-start space-x-2 sm:space-x-3">
               <FileText className="w-5 h-5 text-vera-accent mt-0.5" />
               <div>
                 <p className="text-vera-text-light leading-relaxed">
@@ -88,12 +88,12 @@ function App() {
       </div>
 
       {/* Form */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <form onSubmit={handleSubmit} className="bg-vera-primary/40 backdrop-blur-sm rounded-2xl vera-shadow-lg p-8 border border-vera-accent/20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <form onSubmit={handleSubmit} className="bg-vera-primary/40 backdrop-blur-sm rounded-xl sm:rounded-2xl vera-shadow-lg p-4 sm:p-6 md:p-8 border border-vera-accent/20">
           
           {/* Section 1: Basic Company Data */}
           <FormSection title="1. GRUNDLEGENDE UNTERNEHMENSDATEN UND KONTAKTPERSON">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <FormField label="1.1. Vor- und Nachname" required>
                 <Input
                   type="text"
@@ -113,7 +113,7 @@ function App() {
               </FormField>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <FormField label="1.3. Telefonnummer" description="Optional">
                 <Input
                   type="tel"
@@ -345,7 +345,7 @@ function App() {
           </FormSection>
 
           {/* Section 5: Budget and Cooperation */}
-          <FormSection title="5. BUDGET UND KOOPERATIONSBEREITSCHAFT">
+          <FormSection title="5. BUDGET UND KOOPERATION">
             <FormField label="5.1. Haben Sie ein ungefähres Budget für das Projekt?" description="Die Information ist vertraulich und dient nur unserer internen Bewertung und Lösungsempfehlung.">
               <RadioGroup
                 name="budget"
@@ -408,10 +408,10 @@ function App() {
             </div>
             
             <div className="flex justify-center">
-              <button
-                type="submit"
-                className="vera-gradient-button hover:opacity-90 text-vera-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center space-x-3 vera-glow hover:vera-glow transform hover:-translate-y-1 hover:scale-105"
-              >
+            <button
+               type="submit"
+               className="vera-gradient-button hover:opacity-90 text-vera-dark font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 vera-glow hover:vera-glow transform hover:-translate-y-1 hover:scale-105 min-h-[48px] w-full sm:w-auto"
+             >
                 <Send className="w-5 h-5" />
                 <span>Formular absenden</span>
               </button>
